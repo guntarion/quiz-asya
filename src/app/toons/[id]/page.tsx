@@ -4,12 +4,14 @@
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { use } from 'react';
 import { Quiz } from '@/components/Quiz';
 import { toonsQuizzes } from '@/data/quizzes/toons';
 
-export default function QuizPage({ params }: { params: { id: string } }) {
+export default function QuizPage({ params }: { params: Promise<{ id: string }> }) {
   const router = useRouter();
-  const quiz = toonsQuizzes[params.id as keyof typeof toonsQuizzes];
+  const resolvedParams = use(params);
+  const quiz = toonsQuizzes[resolvedParams.id as keyof typeof toonsQuizzes];
 
   if (!quiz) {
     return (
@@ -38,7 +40,7 @@ export default function QuizPage({ params }: { params: { id: string } }) {
 
         {/* Quiz Component */}
         <Quiz
-          quizId={params.id}
+          quizId={resolvedParams.id}
           onComplete={(score) => {
             // You could save the score or show additional UI here
             console.log(`Quiz completed with score: ${score}`);

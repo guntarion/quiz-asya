@@ -9,6 +9,7 @@ interface CategoryCard {
   image: string;
   icon: string;
   color: string;
+  isComingSoon: boolean; // New property to indicate "Coming Soon" status
 }
 
 // Category data
@@ -19,6 +20,7 @@ const categories: CategoryCard[] = [
     image: '/images/main/main_Toons.webp',
     icon: '✨',
     color: 'bg-[#8A2BE2]', // Primary purple
+    isComingSoon: false,
   },
   {
     title: 'Twisted Toons',
@@ -26,6 +28,7 @@ const categories: CategoryCard[] = [
     image: '/images/main/main_Twisted.webp',
     icon: '🔬',
     color: 'bg-[#87CEEB]', // Sky blue
+    isComingSoon: true,
   },
   {
     title: 'Trinkets',
@@ -33,6 +36,7 @@ const categories: CategoryCard[] = [
     image: '/images/main/main_Trinkets.webp',
     icon: '📚',
     color: 'bg-[#FFD700]', // Sunny yellow
+    isComingSoon: true,
   },
   {
     title: 'Items',
@@ -40,15 +44,23 @@ const categories: CategoryCard[] = [
     image: '/images/main/main_Items.webp',
     icon: '⏳',
     color: 'bg-[#90EE90]', // Grass green
+    isComingSoon: true,
   },
 ];
 
 // Category card component
-const CategoryCard = ({ title, description, image, color }: CategoryCard) => (
-  <Link href={`/${title.toLowerCase().replace(' ', '-')}`} className='block'>
-    <div className={`category-card p-6 rounded-2xl ${color} bg-opacity-20 hover:bg-opacity-30 cursor-pointer`}>
+const CategoryCard = ({ title, description, image, color, isComingSoon }: CategoryCard) => (
+  <Link href={isComingSoon ? '#' : `/${title.toLowerCase().replace(' ', '-')}`} className='block'>
+    <div
+      className={`category-card p-6 rounded-2xl ${color} bg-opacity-20 ${isComingSoon ? 'cursor-not-allowed' : 'hover:bg-opacity-30 cursor-pointer'}`}
+    >
       <div className='relative w-full h-40 mb-4 rounded-lg overflow-hidden'>
-        <Image src={image} alt={title} fill className='object-cover' />
+        <Image src={image} alt={title} fill className={`object-cover ${isComingSoon ? 'grayscale' : ''}`} />
+        {isComingSoon && (
+          <div className='absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center'>
+            <span className='text-white text-lg font-bold'>Coming Soon</span>
+          </div>
+        )}
       </div>
       <h2 className='text-xl font-bold mb-2'>{title}</h2>
       <p className='text-sm opacity-90'>{description}</p>

@@ -9,9 +9,9 @@ const quizzes = [
     description: 'Test your knowledge about Gigi!',
   },
   {
-    id: 'quiz-2',
-    title: 'Quiz 2',
-    description: 'Advanced toons challenge awaits!',
+    id: 'cosmo-quiz',
+    title: 'Quiz Cosmo',
+    description: 'Test your knowledge about Cosmo!',
   },
 ];
 
