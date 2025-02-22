@@ -1,18 +1,32 @@
-import type { Config } from "tailwindcss";
+/* File: tailwind.config.ts */
+import type { Config } from 'tailwindcss';
 
-export default {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+const config: Config = {
+  content: ['./src/pages/**/*.{js,ts,jsx,tsx,mdx}', './src/components/**/*.{js,ts,jsx,tsx,mdx}', './src/app/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: 'var(--primary)',
+        secondary: 'var(--secondary)',
+        accent1: 'var(--accent1)',
+        accent2: 'var(--accent2)',
+      },
+      animation: {
+        float: 'float 3s ease-in-out infinite',
+        'bounce-slow': 'bounce 2s ease-in-out infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+      },
+      fontFamily: {
+        bubblegum: ['Bubblegum Sans', 'cursive'],
       },
     },
   },
   plugins: [],
-} satisfies Config;
+};
+
+export default config;
