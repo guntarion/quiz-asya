@@ -1,5 +1,6 @@
 /* File: src/app/page.tsx */
 import Image from 'next/image';
+import Link from 'next/link';
 
 // Category card interface
 interface CategoryCard {
@@ -44,13 +45,15 @@ const categories: CategoryCard[] = [
 
 // Category card component
 const CategoryCard = ({ title, description, image, color }: CategoryCard) => (
-  <div className={`category-card p-6 rounded-2xl ${color} bg-opacity-20 hover:bg-opacity-30 cursor-pointer`}>
-    <div className='relative w-full h-40 mb-4 rounded-lg overflow-hidden'>
-      <Image src={image} alt={title} fill className='object-cover' />
+  <Link href={`/${title.toLowerCase().replace(' ', '-')}`} className='block'>
+    <div className={`category-card p-6 rounded-2xl ${color} bg-opacity-20 hover:bg-opacity-30 cursor-pointer`}>
+      <div className='relative w-full h-40 mb-4 rounded-lg overflow-hidden'>
+        <Image src={image} alt={title} fill className='object-cover' />
+      </div>
+      <h2 className='text-xl font-bold mb-2'>{title}</h2>
+      <p className='text-sm opacity-90'>{description}</p>
     </div>
-    <h2 className='text-xl font-bold mb-2'>{title}</h2>
-    <p className='text-sm opacity-90'>{description}</p>
-  </div>
+  </Link>
 );
 
 export default function Home() {
