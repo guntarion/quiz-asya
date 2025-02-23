@@ -13,6 +13,16 @@ const quizzes = [
     title: 'Quiz Cosmo',
     description: 'Test your knowledge about Cosmo!',
   },
+  {
+    id: 'glisten-quiz-1',
+    title: 'Quiz Glisten #1',
+    description: "Glisten's appearance, abilities, and basic gameplay mechanics!",
+  },
+  {
+    id: 'glisten-quiz-2',
+    title: 'Quiz Glisten #2',
+    description: "Glisten's personality, relationships, and backstor!",
+  },
 ];
 
 export default function ToonsPage() {

@@ -26,7 +26,7 @@ export function ScoreDisplay({ score, totalQuestions, isCompleted }: ScoreDispla
 
   return (
     <div className='flex items-center justify-between p-4 rounded-lg bg-purple-600 bg-opacity-10'>
-      <div className='text-sm'>Current Score:</div>
+      <div className='text-sm'>Current Score: </div>
       <motion.div key={score} initial={{ scale: 1.5, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className='text-xl font-bold text-purple-500'>
         {score}
       </motion.div>
