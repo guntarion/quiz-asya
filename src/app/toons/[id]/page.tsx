@@ -3,13 +3,11 @@
 'use client';
 
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import { use } from 'react';
 import { Quiz } from '@/components/Quiz';
 import { toonsQuizzes } from '@/data/quizzes/toons';
 
 export default function QuizPage({ params }: { params: Promise<{ id: string }> }) {
-  const router = useRouter();
   const resolvedParams = use(params);
   const quiz = toonsQuizzes[resolvedParams.id as keyof typeof toonsQuizzes];
 
@@ -42,10 +40,9 @@ export default function QuizPage({ params }: { params: Promise<{ id: string }> }
         <Quiz
           quizId={resolvedParams.id}
           onComplete={(score) => {
-            // You could save the score or show additional UI here
+            // Log the score for debugging/analytics purposes
             console.log(`Quiz completed with score: ${score}`);
-            // Optionally redirect after a delay
-            setTimeout(() => router.push('/toons'), 3000);
+            // User can use the back link when ready to return to toons page
           }}
           showProgress={true}
         />

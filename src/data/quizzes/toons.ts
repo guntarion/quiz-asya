@@ -361,6 +361,258 @@ export const toonsQuizzes: Record<string, QuizSet> = {
       },
     ],
   },
+    'brightney-quiz-1': {
+    id: 'brightney-quiz-1',
+    title: 'Brightney Gameplay & Appearance Quiz',
+    questions: [
+      {
+        id: 1,
+        question: 'What type of object is Brightney designed after?',
+        options: [
+          'A flashlight',
+          'A lamp',
+          'A chandelier',
+          'A lantern'
+        ],
+        correctAnswer: 'A lamp',
+        difficulty: 'easy',
+      },
+      {
+        id: 2,
+        question: 'What is Brightney\'s active ability called?',
+        options: [
+          'Bright Idea',
+          'Illuminate',
+          'Night Light',
+          'Light Show'
+        ],
+        correctAnswer: 'Night Light',
+        difficulty: 'easy',
+      },
+      {
+        id: 3,
+        question: 'When can Brightney use her active ability?',
+        options: [
+          'Any time',
+          'Only during chases',
+          'Only during Blackouts',
+          'Only when near other Toons'
+        ],
+        correctAnswer: 'Only during Blackouts',
+        difficulty: 'medium',
+      },
+      {
+        id: 4,
+        question: 'What is Brightney\'s lowest stat?',
+        options: [
+          'Movement Speed',
+          'Stealth',
+          'Stamina',
+          'Extraction Speed'
+        ],
+        correctAnswer: 'Stealth',
+        difficulty: 'medium',
+      },
+      {
+        id: 5,
+        question: 'Which trinket combination is recommended for Brightney\'s extraction?',
+        options: [
+          'Diary + Magnifying Glass',
+          'Magnifying Glass + Participation Award',
+          'Blue Bandana + Machine Manual',
+          'Vanity Mirror + Cardboard Armor'
+        ],
+        correctAnswer: 'Magnifying Glass + Participation Award',
+        difficulty: 'hard',
+      },
+      {
+        id: 6,
+        question: 'What happens during Blackouts that makes Brightney particularly useful?',
+        options: [
+          'She becomes completely invisible',
+          'Her light is brighter and larger than other Toons',
+          'She can float above obstacles',
+          'Her extraction speed doubles'
+        ],
+        correctAnswer: 'Her light is brighter and larger than other Toons',
+        difficulty: 'medium',
+      },
+      {
+        id: 7,
+        question: 'Which Twisted type is particularly dangerous for Brightney to encounter?',
+        options: [
+          'Twisted Rodger',
+          'Twisted Vee',
+          'Twisted Looey',
+          'Twisted Flutter'
+        ],
+        correctAnswer: 'Twisted Vee',
+        difficulty: 'hard',
+      },
+      {
+        id: 8,
+        question: 'What color is Brightney\'s lampshade?',
+        options: [
+          'Pink',
+          'Magenta',
+          'Red',
+          'Purple'
+        ],
+        correctAnswer: 'Magenta',
+        difficulty: 'easy',
+      },
+      {
+        id: 9,
+        question: 'Why is Diary NOT recommended as a trinket for Brightney?',
+        options: [
+          'It decreases her movement speed',
+          'It has no effect due to her zero stealth stat',
+          'It makes her light dimmer',
+          'It conflicts with her ability'
+        ],
+        correctAnswer: 'It has no effect due to her zero stealth stat',
+        difficulty: 'hard',
+      },
+      {
+        id: 10,
+        question: 'What advantage does Brightney\'s low stealth provide in team situations?',
+        options: [
+          'She can hide better',
+          'She can easily bring Twisteds to Distractors',
+          'She becomes invisible to certain Twisteds',
+          'She can communicate with Twisteds'
+        ],
+        correctAnswer: 'She can easily bring Twisteds to Distractors',
+        difficulty: 'medium',
+      }
+    ],
+  },
+  'brightney-quiz-2': {
+    id: 'brightney-quiz-2',
+    title: 'Brightney Lore & Trivia Quiz',
+    questions: [
+      {
+        id: 1,
+        question: 'What does Brightney\'s name likely reference?',
+        options: [
+          'A bright night sky',
+          'A mixture of "Britney" and "bright"',
+          'A famous lamp designer',
+          'A character from another game'
+        ],
+        correctAnswer: 'A mixture of "Britney" and "bright"',
+        difficulty: 'medium',
+      },
+      {
+        id: 2,
+        question: 'What is Brightney\'s designation number?',
+        options: [
+          'U-001',
+          'R-001',
+          'C-001',
+          'M-001'
+        ],
+        correctAnswer: 'U-001',
+        difficulty: 'medium',
+      },
+      {
+        id: 3,
+        question: 'What club is Brightney the president of?',
+        options: [
+          'Dance club',
+          'Book club',
+          'Science club',
+          'Art club'
+        ],
+        correctAnswer: 'Book club',
+        difficulty: 'medium',
+      },
+      {
+        id: 4,
+        question: 'Which other Toons are in Brightney\'s book club?',
+        options: [
+          'Astro and both Razzle & Dazzle',
+          'Astro and Dazzle only',
+          'Flutter and Vee',
+          'Tisha and Gigi'
+        ],
+        correctAnswer: 'Astro and Dazzle only',
+        difficulty: 'hard',
+      },
+      {
+        id: 5,
+        question: 'What type of light bulb does Brightney use?',
+        options: [
+          'LED',
+          'Fluorescent',
+          'Incandescent',
+          'Halogen'
+        ],
+        correctAnswer: 'Incandescent',
+        difficulty: 'hard',
+      },
+      {
+        id: 6,
+        question: 'According to Brightney, what color is her lampshade actually?',
+        options: [
+          'Pink',
+          'Purple',
+          'Red',
+          'Magenta'
+        ],
+        correctAnswer: 'Red',
+        difficulty: 'hard',
+      },
+      {
+        id: 7,
+        question: 'What does Brightney have on her nightstand in Roleplay Mode?',
+        options: [
+          'Books',
+          'Batteries',
+          'Candles',
+          'Photos'
+        ],
+        correctAnswer: 'Batteries',
+        difficulty: 'medium',
+      },
+      {
+        id: 8,
+        question: 'What is unique about Brightney\'s lampshade?',
+        options: [
+          'It changes color',
+          'It\'s not connected to the rest of her body',
+          'It glows in the dark',
+          'It can be used as a weapon'
+        ],
+        correctAnswer: 'It\'s not connected to the rest of her body',
+        difficulty: 'medium',
+      },
+      {
+        id: 9,
+        question: 'According to an interaction, who considers Brightney their favorite contestant?',
+        options: [
+          'Dandy',
+          'Vee',
+          'Pebble',
+          'Finn'
+        ],
+        correctAnswer: 'Vee',
+        difficulty: 'hard',
+      },
+      {
+        id: 10,
+        question: 'What shape do Brightney\'s stats form when visualized?',
+        options: [
+          'A lamp',
+          'A star',
+          'A light bulb',
+          'A circle'
+        ],
+        correctAnswer: 'A lamp',
+        difficulty: 'medium',
+      }
+    ],
+  },
   'quiz-2': {
     id: 'quiz-2',
     title: 'Advanced Toons Quiz',

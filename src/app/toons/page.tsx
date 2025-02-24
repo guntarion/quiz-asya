@@ -23,6 +23,16 @@ const quizzes = [
     title: 'Quiz Glisten #2',
     description: "Glisten's personality, relationships, and backstor!",
   },
+  {
+    id: 'brightney-quiz-1',
+    title: 'Quiz Brightney #1',
+    description: "Test your knowledge about Brightney's unique features, stats, and gameplay strategies",
+  },
+  {
+    id: 'brightney-quiz-2',
+    title: 'Quiz Brightney #2',
+    description: "Delve into Brightney's personality, relationships, and lesser-known facts",
+  },
 ];
 
 export default function ToonsPage() {
