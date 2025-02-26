@@ -361,66 +361,46 @@ export const toonsQuizzes: Record<string, QuizSet> = {
       },
     ],
   },
-    'brightney-quiz-1': {
+  'brightney-quiz-1': {
     id: 'brightney-quiz-1',
     title: 'Brightney Gameplay & Appearance Quiz',
     questions: [
       {
         id: 1,
         question: 'What type of object is Brightney designed after?',
-        options: [
-          'A flashlight',
-          'A lamp',
-          'A chandelier',
-          'A lantern'
-        ],
+        options: ['A flashlight', 'A lamp', 'A chandelier', 'A lantern'],
         correctAnswer: 'A lamp',
         difficulty: 'easy',
       },
       {
         id: 2,
-        question: 'What is Brightney\'s active ability called?',
-        options: [
-          'Bright Idea',
-          'Illuminate',
-          'Night Light',
-          'Light Show'
-        ],
+        question: "What is Brightney's active ability called?",
+        options: ['Bright Idea', 'Illuminate', 'Night Light', 'Light Show'],
         correctAnswer: 'Night Light',
         difficulty: 'easy',
       },
       {
         id: 3,
         question: 'When can Brightney use her active ability?',
-        options: [
-          'Any time',
-          'Only during chases',
-          'Only during Blackouts',
-          'Only when near other Toons'
-        ],
+        options: ['Any time', 'Only during chases', 'Only during Blackouts', 'Only when near other Toons'],
         correctAnswer: 'Only during Blackouts',
         difficulty: 'medium',
       },
       {
         id: 4,
-        question: 'What is Brightney\'s lowest stat?',
-        options: [
-          'Movement Speed',
-          'Stealth',
-          'Stamina',
-          'Extraction Speed'
-        ],
+        question: "What is Brightney's lowest stat?",
+        options: ['Movement Speed', 'Stealth', 'Stamina', 'Extraction Speed'],
         correctAnswer: 'Stealth',
         difficulty: 'medium',
       },
       {
         id: 5,
-        question: 'Which trinket combination is recommended for Brightney\'s extraction?',
+        question: "Which trinket combination is recommended for Brightney's extraction?",
         options: [
           'Diary + Magnifying Glass',
           'Magnifying Glass + Participation Award',
           'Blue Bandana + Machine Manual',
-          'Vanity Mirror + Cardboard Armor'
+          'Vanity Mirror + Cardboard Armor',
         ],
         correctAnswer: 'Magnifying Glass + Participation Award',
         difficulty: 'hard',
@@ -432,7 +412,7 @@ export const toonsQuizzes: Record<string, QuizSet> = {
           'She becomes completely invisible',
           'Her light is brighter and larger than other Toons',
           'She can float above obstacles',
-          'Her extraction speed doubles'
+          'Her extraction speed doubles',
         ],
         correctAnswer: 'Her light is brighter and larger than other Toons',
         difficulty: 'medium',
@@ -440,24 +420,14 @@ export const toonsQuizzes: Record<string, QuizSet> = {
       {
         id: 7,
         question: 'Which Twisted type is particularly dangerous for Brightney to encounter?',
-        options: [
-          'Twisted Rodger',
-          'Twisted Vee',
-          'Twisted Looey',
-          'Twisted Flutter'
-        ],
+        options: ['Twisted Rodger', 'Twisted Vee', 'Twisted Looey', 'Twisted Flutter'],
         correctAnswer: 'Twisted Vee',
         difficulty: 'hard',
       },
       {
         id: 8,
-        question: 'What color is Brightney\'s lampshade?',
-        options: [
-          'Pink',
-          'Magenta',
-          'Red',
-          'Purple'
-        ],
+        question: "What color is Brightney's lampshade?",
+        options: ['Pink', 'Magenta', 'Red', 'Purple'],
         correctAnswer: 'Magenta',
         difficulty: 'easy',
       },
@@ -468,23 +438,23 @@ export const toonsQuizzes: Record<string, QuizSet> = {
           'It decreases her movement speed',
           'It has no effect due to her zero stealth stat',
           'It makes her light dimmer',
-          'It conflicts with her ability'
+          'It conflicts with her ability',
         ],
         correctAnswer: 'It has no effect due to her zero stealth stat',
         difficulty: 'hard',
       },
       {
         id: 10,
-        question: 'What advantage does Brightney\'s low stealth provide in team situations?',
+        question: "What advantage does Brightney's low stealth provide in team situations?",
         options: [
           'She can hide better',
           'She can easily bring Twisteds to Distractors',
           'She becomes invisible to certain Twisteds',
-          'She can communicate with Twisteds'
+          'She can communicate with Twisteds',
         ],
         correctAnswer: 'She can easily bring Twisteds to Distractors',
         difficulty: 'medium',
-      }
+      },
     ],
   },
   'brightney-quiz-2': {
@@ -493,126 +463,169 @@ export const toonsQuizzes: Record<string, QuizSet> = {
     questions: [
       {
         id: 1,
-        question: 'What does Brightney\'s name likely reference?',
-        options: [
-          'A bright night sky',
-          'A mixture of "Britney" and "bright"',
-          'A famous lamp designer',
-          'A character from another game'
-        ],
+        question: "What does Brightney's name likely reference?",
+        options: ['A bright night sky', 'A mixture of "Britney" and "bright"', 'A famous lamp designer', 'A character from another game'],
         correctAnswer: 'A mixture of "Britney" and "bright"',
         difficulty: 'medium',
       },
       {
         id: 2,
-        question: 'What is Brightney\'s designation number?',
-        options: [
-          'U-001',
-          'R-001',
-          'C-001',
-          'M-001'
-        ],
+        question: "What is Brightney's designation number?",
+        options: ['U-001', 'R-001', 'C-001', 'M-001'],
         correctAnswer: 'U-001',
         difficulty: 'medium',
       },
       {
         id: 3,
         question: 'What club is Brightney the president of?',
-        options: [
-          'Dance club',
-          'Book club',
-          'Science club',
-          'Art club'
-        ],
+        options: ['Dance club', 'Book club', 'Science club', 'Art club'],
         correctAnswer: 'Book club',
         difficulty: 'medium',
       },
       {
         id: 4,
-        question: 'Which other Toons are in Brightney\'s book club?',
-        options: [
-          'Astro and both Razzle & Dazzle',
-          'Astro and Dazzle only',
-          'Flutter and Vee',
-          'Tisha and Gigi'
-        ],
+        question: "Which other Toons are in Brightney's book club?",
+        options: ['Astro and both Razzle & Dazzle', 'Astro and Dazzle only', 'Flutter and Vee', 'Tisha and Gigi'],
         correctAnswer: 'Astro and Dazzle only',
         difficulty: 'hard',
       },
       {
         id: 5,
         question: 'What type of light bulb does Brightney use?',
-        options: [
-          'LED',
-          'Fluorescent',
-          'Incandescent',
-          'Halogen'
-        ],
+        options: ['LED', 'Fluorescent', 'Incandescent', 'Halogen'],
         correctAnswer: 'Incandescent',
         difficulty: 'hard',
       },
       {
         id: 6,
         question: 'According to Brightney, what color is her lampshade actually?',
-        options: [
-          'Pink',
-          'Purple',
-          'Red',
-          'Magenta'
-        ],
+        options: ['Pink', 'Purple', 'Red', 'Magenta'],
         correctAnswer: 'Red',
         difficulty: 'hard',
       },
       {
         id: 7,
         question: 'What does Brightney have on her nightstand in Roleplay Mode?',
-        options: [
-          'Books',
-          'Batteries',
-          'Candles',
-          'Photos'
-        ],
+        options: ['Books', 'Batteries', 'Candles', 'Photos'],
         correctAnswer: 'Batteries',
         difficulty: 'medium',
       },
       {
         id: 8,
-        question: 'What is unique about Brightney\'s lampshade?',
-        options: [
-          'It changes color',
-          'It\'s not connected to the rest of her body',
-          'It glows in the dark',
-          'It can be used as a weapon'
-        ],
-        correctAnswer: 'It\'s not connected to the rest of her body',
+        question: "What is unique about Brightney's lampshade?",
+        options: ['It changes color', "It's not connected to the rest of her body", 'It glows in the dark', 'It can be used as a weapon'],
+        correctAnswer: "It's not connected to the rest of her body",
         difficulty: 'medium',
       },
       {
         id: 9,
         question: 'According to an interaction, who considers Brightney their favorite contestant?',
-        options: [
-          'Dandy',
-          'Vee',
-          'Pebble',
-          'Finn'
-        ],
+        options: ['Dandy', 'Vee', 'Pebble', 'Finn'],
         correctAnswer: 'Vee',
         difficulty: 'hard',
       },
       {
         id: 10,
-        question: 'What shape do Brightney\'s stats form when visualized?',
-        options: [
-          'A lamp',
-          'A star',
-          'A light bulb',
-          'A circle'
-        ],
+        question: "What shape do Brightney's stats form when visualized?",
+        options: ['A lamp', 'A star', 'A light bulb', 'A circle'],
         correctAnswer: 'A lamp',
         difficulty: 'medium',
-      }
+      },
     ],
   },
+
+  'gigi-quiz-2': {
+    id: 'gigi-quiz-2',
+    title: 'Gigi Extended Knowledge Quiz',
+    questions: [
+      {
+        id: 1,
+        question: "What was changed about Gigi's stats in update v0.4.1?",
+        options: [
+          'Her Extraction Speed and Stealth were swapped',
+          'Her Movement Speed and Stamina were swapped',
+          'Her Skill Check and Movement Speed were swapped',
+          'Her Stealth and Stamina were swapped',
+        ],
+        correctAnswer: 'Her Movement Speed and Stamina were swapped',
+        difficulty: 'hard',
+      },
+      {
+        id: 2,
+        question: 'Which character does Gigi help with writing in their diary?',
+        options: ['Vee', 'Flutter', 'Poppy', 'Connie'],
+        correctAnswer: 'Flutter',
+        difficulty: 'medium',
+      },
+      {
+        id: 3,
+        question: "What movie reference is in Gigi's dialogue?",
+        options: [
+          '"Oh yes, it\'s all coming together" (The Emperor\'s New Groove)',
+          '"Here\'s looking at you, kid" (Casablanca)',
+          '"May the force be with you" (Star Wars)',
+          '"I\'ll be back" (The Terminator)',
+        ],
+        correctAnswer: '"Oh yes, it\'s all coming together" (The Emperor\'s New Groove)',
+        difficulty: 'hard',
+      },
+      {
+        id: 4,
+        question: 'Which character shares the same ability sound as Gigi?',
+        options: ['Toodles', 'Flutter', 'Rodger', 'Shelly'],
+        correctAnswer: 'Toodles',
+        difficulty: 'hard',
+      },
+      {
+        id: 5,
+        question: "What trinket best complements Gigi's ability?",
+        options: ['Water Cooler', 'Feather Duster', 'Ghost Snakes In A Can', 'Magnifying Glass'],
+        correctAnswer: 'Feather Duster',
+        difficulty: 'medium',
+      },
+      {
+        id: 6,
+        question: 'What unique feature does Gigi share with Rodger?',
+        options: ['Same movement speed', 'Same ability type', 'Transparent part on head', 'Same difficulty level'],
+        correctAnswer: 'Transparent part on head',
+        difficulty: 'medium',
+      },
+      {
+        id: 7,
+        question: "Which of these is NOT known to be one of Gigi's good friends?",
+        options: ['Flutter', 'Poppy', 'Connie', 'Tisha'],
+        correctAnswer: 'Tisha',
+        difficulty: 'medium',
+      },
+      {
+        id: 8,
+        question: 'What is unique about how Gigi was added to the game?',
+        options: [
+          'She was a fan-created character',
+          'She was part of a promotional event',
+          'She was the first and only Toon added by herself',
+          'She was originally a different character type',
+        ],
+        correctAnswer: 'She was the first and only Toon added by herself',
+        difficulty: 'hard',
+      },
+      {
+        id: 9,
+        question: "What does Gigi's pose often resemble?",
+        options: ['Ballet dancer pose', 'T-Rex arms posture', 'Thinking man position', 'Victory stance'],
+        correctAnswer: 'T-Rex arms posture',
+        difficulty: 'medium',
+      },
+      {
+        id: 10,
+        question: 'What\'s the likely meaning of the "R" in Gigi\'s possible R-001 or R-003 designation?',
+        options: ['Red (her color)', 'Robot (her design)', 'Rare (her rarity)', 'Random (her ability)'],
+        correctAnswer: 'Rare (her rarity)',
+        difficulty: 'easy',
+      },
+    ],
+  },
+
   'quiz-2': {
     id: 'quiz-2',
     title: 'Advanced Toons Quiz',

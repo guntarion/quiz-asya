@@ -28,7 +28,7 @@ const categories: CategoryCard[] = [
     image: '/images/main/main_Twisted.webp',
     icon: '🔬',
     color: 'bg-[#87CEEB]', // Sky blue
-    isComingSoon: true,
+    isComingSoon: false,
   },
   {
     title: 'Trinkets',

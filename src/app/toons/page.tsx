@@ -9,6 +9,11 @@ const quizzes = [
     description: 'Test your knowledge about Gigi!',
   },
   {
+    id: 'gigi-quiz-2',
+    title: 'Quiz Gigi 2',
+    description: 'Test your knowledge about Gigi Part 2!',
+  },
+  {
     id: 'cosmo-quiz',
     title: 'Quiz Cosmo',
     description: 'Test your knowledge about Cosmo!',
