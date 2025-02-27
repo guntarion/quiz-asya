@@ -8,11 +8,11 @@ const quizzes = [
     title: 'Twisted Toons: Basic Knowledge Quiz',
     description: 'Test your knowledge about Twisted Toons basics!',
   },
-  // {
-  //   id: 'twisted-mechanics-quiz',
-  //   title: 'Twisted Toons: Special Abilities Quiz',
-  //   description: 'How well do you know the special abilities of Twisted Toons?',
-  // },
+  {
+    id: 'twisted-mechanics-quiz',
+    title: 'Twisted Toons: Special Abilities Quiz',
+    description: 'How well do you know the special abilities of Twisted Toons?',
+  },
   // {
   //   id: 'twisted-categories-quiz',
   //   title: 'Twisted Toons: Categories & Classifications Quiz',
