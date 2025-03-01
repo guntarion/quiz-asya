@@ -13,11 +13,11 @@ const quizzes = [
     title: 'Twisted Toons: Special Abilities Quiz',
     description: 'How well do you know the special abilities of Twisted Toons?',
   },
-  // {
-  //   id: 'twisted-categories-quiz',
-  //   title: 'Twisted Toons: Categories & Classifications Quiz',
-  //   description: 'Test your knowledge about different types of Twisted Toons!',
-  // },
+  {
+    id: 'twisted-categories-quiz',
+    title: 'Twisted Toons: Categories & Classifications Quiz',
+    description: 'Test your knowledge about different types of Twisted Toons!',
+  },
   // {
   //   id: 'twisted-stats-quiz',
   //   title: 'Twisted Toons: Stats & Characteristics Quiz',
