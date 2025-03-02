@@ -18,11 +18,11 @@ const quizzes = [
     title: 'Twisted Toons: Categories & Classifications Quiz',
     description: 'Test your knowledge about different types of Twisted Toons!',
   },
-  // {
-  //   id: 'twisted-stats-quiz',
-  //   title: 'Twisted Toons: Stats & Characteristics Quiz',
-  //   description: 'How well do you know the unique traits of each Twisted Toon?',
-  // },
+  {
+    id: 'twisted-stats-quiz',
+    title: 'Twisted Toons: Stats & Characteristics Quiz',
+    description: 'How well do you know the unique traits of each Twisted Toon?',
+  },
 ];
 
 export default function TwistedToonsPage() {
