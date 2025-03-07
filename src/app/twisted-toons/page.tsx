@@ -23,6 +23,16 @@ const quizzes = [
     title: 'Twisted Toons: Stats & Characteristics Quiz',
     description: 'How well do you know the unique traits of each Twisted Toon?',
   },
+  {
+    id: 'twisted-brightney-quiz',
+    title: 'Twisted Brightney Quiz',
+    description: "Twisted Brightney's appearance, abilities, and characteristics",
+  },
+  {
+    id: 'twisted-astro-quiz',
+    title: 'Twisted Astro Quiz',
+    description: "Twisted Astro's appearance, abilities, and characteristics",
+  },
 ];
 
 export default function TwistedToonsPage() {
