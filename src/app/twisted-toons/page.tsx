@@ -33,6 +33,11 @@ const quizzes = [
     title: 'Twisted Astro Quiz',
     description: "Twisted Astro's appearance, abilities, and characteristics",
   },
+  {
+    id: 'twisted-glisten-quiz',
+    title: 'Twisted Glisten Quiz',
+    description: "Twisted Glisten's unique characteristics and strategies",
+  },
 ];
 
 export default function TwistedToonsPage() {
