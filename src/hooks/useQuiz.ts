@@ -4,6 +4,7 @@ import { useState, useCallback, useEffect } from 'react';
 import { QuizState, QuizQuestion } from '@/components/Quiz/types';
 import { toonsQuizzes } from '@/data/quizzes/toons';
 import { twistedToonsQuizzes } from '@/data/quizzes/twistedtoons';
+import { CookiesNPCQuizzes } from '@/data/quizzes/cookienpc';
 
 interface UseQuizProps {
   quizId: string;
@@ -25,7 +26,7 @@ export function useQuiz({ quizId }: UseQuizProps) {
   useEffect(() => {
     try {
       // Check both quiz sets
-      const quizData = toonsQuizzes[quizId] || twistedToonsQuizzes[quizId];
+      const quizData = toonsQuizzes[quizId] || twistedToonsQuizzes[quizId] || CookiesNPCQuizzes[quizId];
       if (!quizData) {
         throw new Error('Quiz not found');
       }

@@ -48,9 +48,58 @@ const categories: CategoryCard[] = [
   },
 ];
 
+// Category data for CookieRunKingdom
+const categoryCookieRunKingdom: CategoryCard[] = [
+  {
+    title: 'Cookies and NPC',
+    description: 'Together, we, Cookies, can do anything!',
+    image: '/images/cookierun/Icon_stories_portal.webp',
+    icon: '✨',
+    color: 'bg-[#8A2BE2]', // Primary purple
+    isComingSoon: false,
+  },
+  {
+    title: 'Gacha and Treasures',
+    description: 'New Cookies are baked in the Witch oven, escaping to the Kingdom thereafter.!',
+    image: '/images/cookierun/Icon_cookies_portal.webp',
+    icon: '🔬',
+    color: 'bg-[#87CEEB]', // Sky blue
+    isComingSoon: true,
+  },
+  {
+    title: 'Stories and Game Modes',
+    description: 'Cutscene sequences which recount the dialogues and situations of characters.',
+    image: '/images/cookierun/Icon_gacha_portal.webp',
+    icon: '📚',
+    color: 'bg-[#FFD700]', // Sunny yellow
+    isComingSoon: true,
+  },
+  {
+    title: 'Misc',
+    description: 'You can place any decors you like! Dee-doo-dah!',
+    image: '/images/cookierun/Icon_npcs_portal.webp',
+    icon: '⏳',
+    color: 'bg-[#90EE90]', // Grass green
+    isComingSoon: true,
+  },
+];
+
 // Category card component
 const CategoryCard = ({ title, description, image, color, isComingSoon }: CategoryCard) => (
-  <Link href={isComingSoon ? '#' : `/${title.toLowerCase().replace(' ', '-')}`} className='block'>
+  <Link
+    href={
+      isComingSoon
+        ? '#'
+        : title === 'Cookies and NPC'
+        ? '/cookies-npc'
+        : title === 'Gacha and Treasures'
+        ? '/gacha-treasures'
+        : title === 'Stories and Game Modes'
+        ? '/stories-game-modes'
+        : `/${title.toLowerCase().replace(/[ &]/g, '-')}`
+    }
+    className='block'
+  >
     <div
       className={`category-card p-6 rounded-2xl ${color} bg-opacity-20 ${isComingSoon ? 'cursor-not-allowed' : 'hover:bg-opacity-30 cursor-pointer'}`}
     >
@@ -90,6 +139,16 @@ export default function Home() {
           {categories.map((category) => (
             <CategoryCard key={category.title} {...category} />
           ))}
+        </div>
+
+        {/* Cookie Run Kingdom Categories */}
+        <div className='mt-16'>
+          <h2 className='text-2xl font-bold mb-8 text-center text-gradient'>Cookie Run Kingdom</h2>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {categoryCookieRunKingdom.map((category) => (
+              <CategoryCard key={category.title} {...category} />
+            ))}
+          </div>
         </div>
 
         {/* Fun Facts Section */}
