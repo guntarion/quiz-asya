@@ -53,23 +53,22 @@ export function QuestionCard({ question, onAnswer, isAnswered, selectedAnswer }:
                 ${
                   isAnswered
                     ? isCorrect
-                      ? 'bg-green-500 bg-opacity-20 border-green-500'
+                      ? 'bg-green-500 bg-opacity-20 border-green-500 sparkle-effect'
                       : isIncorrect
-                      ? 'bg-red-500 bg-opacity-20 border-red-500'
+                      ? 'bg-red-500 bg-opacity-20 border-red-500 shake-effect'
                       : 'bg-purple-600 bg-opacity-20'
                     : 'bg-purple-600 bg-opacity-20 hover:bg-opacity-30'
                 }
                 ${isSelected ? 'border-2' : 'border-2 border-transparent'}
                 disabled:cursor-not-allowed
               `}
-              aria-pressed={isSelected}
               role='radio'
               aria-checked={isSelected}
             >
               {option}
               {isAnswered && (
                 <span className='float-right'>
-                  {isCorrect && '✓'}
+                  {isCorrect && '✨'}
                   {isIncorrect && '✗'}
                 </span>
               )}
