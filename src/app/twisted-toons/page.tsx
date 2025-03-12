@@ -38,6 +38,16 @@ const quizzes = [
     title: 'Twisted Glisten Quiz',
     description: "Twisted Glisten's unique characteristics and strategies",
   },
+  {
+    id: 'twistedvee-quiz-1',
+    title: 'Twisted Vee Quiz #1',
+    description: "Twisted Vee's gameplay mechanics, stats, and strategic elements",
+  },
+  {
+    id: 'twistedvee-quiz-2',
+    title: 'Twisted Vee Quiz #2',
+    description: "Twisted Vee's personality, relationships, and unique characteristics",
+  },
 ];
 
 export default function TwistedToonsPage() {
