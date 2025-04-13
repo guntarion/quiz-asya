@@ -1,17 +1,21 @@
 /* File: src/components/Quiz/Quiz.tsx */
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react'; // Import useState
 import { motion, AnimatePresence } from 'framer-motion';
 import { QuizProps } from './types';
 import { useQuiz } from '@/hooks/useQuiz';
+import { AnswerReview } from './AnswerReview'; // Import AnswerReview
 import { QuestionCard } from './QuestionCard';
 import { ProgressBar } from './ProgressBar';
 import { ScoreDisplay } from './ScoreDisplay';
 
 export function Quiz({ quizId, onComplete, showProgress = true }: QuizProps) {
-  const { state, actions, currentQuestion, totalQuestions, progress } = useQuiz({ quizId });
-
+  // Destructure questions from useQuiz result
+  const { state, actions, currentQuestion, totalQuestions, progress, questions } = useQuiz({ quizId });
   const { currentQuestionIndex, score, answers, status, loading, error } = state;
+
+  // State to control review visibility
+  const [showReview, setShowReview] = useState(false);
 
   // Start quiz automatically when loaded
   useEffect(() => {
@@ -42,10 +46,29 @@ export function Quiz({ quizId, onComplete, showProgress = true }: QuizProps) {
     );
   }
 
+  // Handle completed state with review toggle
   if (status === 'completed') {
-    return <ScoreDisplay score={score} totalQuestions={totalQuestions} isCompleted={true} />;
+    if (showReview) {
+      return (
+        <AnswerReview
+          questions={questions}
+          answers={answers}
+          onBack={() => setShowReview(false)} // Handler to go back to score
+        />
+      );
+    } else {
+      return (
+        <ScoreDisplay
+          score={score}
+          totalQuestions={totalQuestions}
+          isCompleted={true}
+          onReview={() => setShowReview(true)} // Handler to show review
+        />
+      );
+    }
   }
 
+  // Render active quiz
   return (
     <div className='space-y-6'>
       {/* Progress and Score Section */}

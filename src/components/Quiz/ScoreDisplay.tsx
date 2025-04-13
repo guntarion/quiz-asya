@@ -3,9 +3,11 @@
 import { motion } from 'framer-motion';
 import { ScoreDisplayProps } from './types';
 
-export function ScoreDisplay({ score, totalQuestions, isCompleted }: ScoreDisplayProps) {
-  const maxScore = totalQuestions * 2; // Each correct answer is worth 2 points
-  const percentage = Math.round((score / maxScore) * 100);
+// Add onReview to props
+export function ScoreDisplay({ score, totalQuestions, isCompleted, onReview }: ScoreDisplayProps) {
+  // Handle potential division by zero if totalQuestions is 0
+  const maxScore = totalQuestions * 2;
+  const percentage = maxScore > 0 ? Math.round((score / maxScore) * 100) : 0;
 
   if (isCompleted) {
     return (
@@ -33,7 +35,20 @@ export function ScoreDisplay({ score, totalQuestions, isCompleted }: ScoreDispla
               {percentage}%
             </p>
           </motion.div>
-          <p className='text-sm text-gray-400'>(Max possible score: {maxScore})</p>
+          <p className='text-sm text-gray-400 mb-6'>(Max possible score: {maxScore})</p>
+
+          {/* Add Review Button */}
+          {onReview && (
+            <motion.button
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              onClick={onReview}
+              className='mt-6 px-6 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-50'
+            >
+              Review Answers
+            </motion.button>
+          )}
         </div>
       </motion.div>
     );

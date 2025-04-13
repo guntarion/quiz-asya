@@ -4,6 +4,21 @@ import QuizCard from './components/QuizCard';
 
 const quizzes = [
   {
+    id: 'shelly-quiz-1',
+    title: 'Quiz Shelly 1',
+    description: "Test your knowledge about Shelly's appearance, stats, and basic information",
+  },
+  {
+    id: 'shelly-quiz-2',
+    title: 'Quiz Shelly 2',
+    description: "Test your knowledge about Shelly's abilities, stats, and gameplay mechanics",
+  },
+  {
+    id: 'shelly-quiz-3',
+    title: 'Quiz Shelly 3',
+    description: "Test your knowledge about Shelly's personality, relationships, and character lore",
+  },
+  {
     id: 'gigi-quiz',
     title: 'Quiz Gigi',
     description: 'Test your knowledge about Gigi!',

@@ -46,4 +46,12 @@ export interface ScoreDisplayProps {
   score: number;
   totalQuestions: number;
   isCompleted?: boolean;
+  onReview?: () => void; // Add optional callback for review button
+}
+
+// Props for the new AnswerReview component
+export interface AnswerReviewProps {
+  questions: QuizQuestion[];
+  answers: string[];
+  onBack: () => void; // Callback to close the review view
 }

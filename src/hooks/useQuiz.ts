@@ -112,6 +112,7 @@ export function useQuiz({ quizId }: UseQuizProps) {
     },
     currentQuestion: questions[state.currentQuestionIndex],
     totalQuestions: questions.length,
-    progress: (state.currentQuestionIndex / questions.length) * 100,
+    progress: questions.length > 0 ? (state.currentQuestionIndex / questions.length) * 100 : 0,
+    questions, // Expose the questions array
   };
 }
