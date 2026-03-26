@@ -14,8 +14,23 @@ export interface QuizSet {
   questions: QuizQuestion[];
 }
 
+export interface QuizAttempt {
+  quizId: string;
+  quizTitle: string;
+  category: string;
+  score: number;
+  maxScore: number;
+  percentage: number;
+  correctCount: number;
+  totalQuestions: number;
+  completedAt: string; // ISO timestamp
+  answers: string[];
+}
+
 export interface QuizProps {
   quizId: string;
+  category?: string;
+  quizTitle?: string;
   onComplete?: (score: number) => void;
   showProgress?: boolean;
 }
@@ -46,12 +61,13 @@ export interface ScoreDisplayProps {
   score: number;
   totalQuestions: number;
   isCompleted?: boolean;
-  onReview?: () => void; // Add optional callback for review button
+  onReview?: () => void;
+  attemptNumber?: number;
+  personalBest?: number | null; // best percentage from previous attempts
 }
 
-// Props for the new AnswerReview component
 export interface AnswerReviewProps {
   questions: QuizQuestion[];
   answers: string[];
-  onBack: () => void; // Callback to close the review view
+  onBack: () => void;
 }

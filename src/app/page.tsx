@@ -143,6 +143,12 @@ export default function Home() {
         {/* Welcome Message */}
         <div className='text-center mb-12'>
           <p className='text-lg md:text-xl'>Ready to embark on an exciting journey of discovery?</p>
+          <Link
+            href='/history'
+            className='inline-flex items-center gap-2 mt-4 px-5 py-2 rounded-full text-sm font-bold glass-card hover:border-[var(--primary)] transition-all'
+          >
+            ⭐ My Progress
+          </Link>
         </div>
 
         {/* Category Grid */}

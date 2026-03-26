@@ -10,7 +10,6 @@ function getTierMessage(percentage: number): { message: string; emoji: string } 
   return { message: "Don't worry, try again!", emoji: '💖' };
 }
 
-// Confetti dot component
 function ConfettiDot({ delay, x, y, color }: { delay: number; x: number; y: number; color: string }) {
   return (
     <motion.span
@@ -23,12 +22,15 @@ function ConfettiDot({ delay, x, y, color }: { delay: number; x: number; y: numb
   );
 }
 
-export function ScoreDisplay({ score, totalQuestions, isCompleted, onReview }: ScoreDisplayProps) {
+export function ScoreDisplay({ score, totalQuestions, isCompleted, onReview, attemptNumber, personalBest }: ScoreDisplayProps) {
   const maxScore = totalQuestions * 2;
   const percentage = maxScore > 0 ? Math.round((score / maxScore) * 100) : 0;
 
   if (isCompleted) {
     const tier = getTierMessage(percentage);
+    const isNewPersonalBest = personalBest !== null && personalBest !== undefined && percentage > personalBest;
+    const isFirstAttempt = personalBest === null || personalBest === undefined;
+
     const confettiColors = ['var(--secondary)', 'var(--primary)', 'var(--accent1)', 'var(--accent2)', 'var(--accent3)', 'var(--accent4)'];
     const confettiDots = Array.from({ length: 8 }, (_, i) => ({
       delay: i * 0.08,
@@ -39,7 +41,14 @@ export function ScoreDisplay({ score, totalQuestions, isCompleted, onReview }: S
 
     return (
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className='text-center glass-card p-8'>
-        <h2 className='text-3xl font-bold mb-6 text-gradient'>Quiz Complete!</h2>
+        <h2 className='text-3xl font-bold mb-2 text-gradient'>Quiz Complete!</h2>
+
+        {/* Attempt number */}
+        {attemptNumber !== undefined && attemptNumber > 0 && (
+          <p className='text-sm opacity-60 mb-6'>
+            Attempt #{attemptNumber}
+          </p>
+        )}
 
         <div className='space-y-6'>
           {/* Circular progress ring */}
@@ -76,7 +85,6 @@ export function ScoreDisplay({ score, totalQuestions, isCompleted, onReview }: S
                 {percentage}%
               </motion.span>
             </div>
-            {/* Confetti burst */}
             {confettiDots.map((dot, i) => (
               <ConfettiDot key={i} {...dot} />
             ))}
@@ -94,6 +102,22 @@ export function ScoreDisplay({ score, totalQuestions, isCompleted, onReview }: S
               {score} <span className='text-lg opacity-60'>/ {maxScore}</span>
             </motion.p>
           </div>
+
+          {/* Personal best comparison */}
+          {!isFirstAttempt && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7 }}
+              className='glass-card px-4 py-2 inline-block rounded-full'
+            >
+              {isNewPersonalBest ? (
+                <span className='text-sm font-bold text-[var(--success)]'>🏆 New Personal Best! (was {personalBest}%)</span>
+              ) : (
+                <span className='text-sm opacity-70'>Personal Best: {personalBest}%</span>
+              )}
+            </motion.div>
+          )}
 
           {/* Tier message */}
           <motion.div

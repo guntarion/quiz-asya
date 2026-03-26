@@ -39,11 +39,8 @@ export default function QuizPage({ params }: { params: Promise<{ id: string }> }
         {/* Quiz Component */}
         <Quiz
           quizId={resolvedParams.id}
-          onComplete={(score) => {
-            // Log the score for debugging/analytics purposes
-            console.log(`Quiz completed with score: ${score}`);
-            // User can use the back link when ready to return to twisted-toons page
-          }}
+          category="twisted-toons"
+          quizTitle={quiz.title}
           showProgress={true}
         />
       </main>
