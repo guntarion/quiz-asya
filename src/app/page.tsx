@@ -8,8 +8,9 @@ interface CategoryCard {
   description: string;
   image: string;
   icon: string;
-  color: string;
-  isComingSoon: boolean; // New property to indicate "Coming Soon" status
+  accentColor: string;
+  borderColor: string;
+  isComingSoon: boolean;
 }
 
 // Category data
@@ -19,7 +20,8 @@ const categories: CategoryCard[] = [
     description: 'Tun tun tun!',
     image: '/images/main/main_Toons.webp',
     icon: '✨',
-    color: 'bg-[#8A2BE2]', // Primary purple
+    accentColor: 'bg-[var(--primary)]',
+    borderColor: 'border-t-[var(--primary)]',
     isComingSoon: false,
   },
   {
@@ -27,7 +29,8 @@ const categories: CategoryCard[] = [
     description: 'Yang bikin serem!',
     image: '/images/main/main_Twisted.webp',
     icon: '🔬',
-    color: 'bg-[#87CEEB]', // Sky blue
+    accentColor: 'bg-[var(--accent1)]',
+    borderColor: 'border-t-[var(--accent1)]',
     isComingSoon: false,
   },
   {
@@ -35,7 +38,8 @@ const categories: CategoryCard[] = [
     description: 'Tambah kesaktian!',
     image: '/images/main/main_Trinkets.webp',
     icon: '📚',
-    color: 'bg-[#FFD700]', // Sunny yellow
+    accentColor: 'bg-[var(--accent3)]',
+    borderColor: 'border-t-[var(--accent3)]',
     isComingSoon: true,
   },
   {
@@ -43,7 +47,8 @@ const categories: CategoryCard[] = [
     description: 'Travel through time!',
     image: '/images/main/main_Items.webp',
     icon: '⏳',
-    color: 'bg-[#90EE90]', // Grass green
+    accentColor: 'bg-[var(--accent2)]',
+    borderColor: 'border-t-[var(--accent2)]',
     isComingSoon: true,
   },
 ];
@@ -55,7 +60,8 @@ const categoryCookieRunKingdom: CategoryCard[] = [
     description: 'Together, we, Cookies, can do anything!',
     image: '/images/cookierun/Icon_stories_portal.webp',
     icon: '✨',
-    color: 'bg-[#8A2BE2]', // Primary purple
+    accentColor: 'bg-[var(--secondary)]',
+    borderColor: 'border-t-[var(--secondary)]',
     isComingSoon: false,
   },
   {
@@ -63,7 +69,8 @@ const categoryCookieRunKingdom: CategoryCard[] = [
     description: 'New Cookies are baked in the Witch oven, escaping to the Kingdom thereafter.!',
     image: '/images/cookierun/Icon_cookies_portal.webp',
     icon: '🔬',
-    color: 'bg-[#87CEEB]', // Sky blue
+    accentColor: 'bg-[var(--accent4)]',
+    borderColor: 'border-t-[var(--accent4)]',
     isComingSoon: true,
   },
   {
@@ -71,7 +78,8 @@ const categoryCookieRunKingdom: CategoryCard[] = [
     description: 'Cutscene sequences which recount the dialogues and situations of characters.',
     image: '/images/cookierun/Icon_gacha_portal.webp',
     icon: '📚',
-    color: 'bg-[#FFD700]', // Sunny yellow
+    accentColor: 'bg-[var(--accent3)]',
+    borderColor: 'border-t-[var(--accent3)]',
     isComingSoon: true,
   },
   {
@@ -79,13 +87,14 @@ const categoryCookieRunKingdom: CategoryCard[] = [
     description: 'You can place any decors you like! Dee-doo-dah!',
     image: '/images/cookierun/Icon_npcs_portal.webp',
     icon: '⏳',
-    color: 'bg-[#90EE90]', // Grass green
+    accentColor: 'bg-[var(--accent2)]',
+    borderColor: 'border-t-[var(--accent2)]',
     isComingSoon: true,
   },
 ];
 
 // Category card component
-const CategoryCard = ({ title, description, image, color, isComingSoon }: CategoryCard) => (
+const CategoryCardComponent = ({ title, description, image, borderColor, isComingSoon }: CategoryCard) => (
   <Link
     href={
       isComingSoon
@@ -101,18 +110,20 @@ const CategoryCard = ({ title, description, image, color, isComingSoon }: Catego
     className='block'
   >
     <div
-      className={`category-card p-6 rounded-2xl ${color} bg-opacity-20 ${isComingSoon ? 'cursor-not-allowed' : 'hover:bg-opacity-30 cursor-pointer'}`}
+      className={`category-card glass-card p-5 border-t-4 ${borderColor} ${isComingSoon ? 'cursor-not-allowed opacity-80' : 'hover:scale-[1.02] cursor-pointer'} transition-all`}
     >
       <div className='relative w-full h-40 mb-4 rounded-lg overflow-hidden'>
         <Image src={image} alt={title} fill className={`object-cover ${isComingSoon ? 'grayscale' : ''}`} />
         {isComingSoon && (
-          <div className='absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center'>
-            <span className='text-white text-lg font-bold'>Coming Soon</span>
+          <div className='absolute inset-0 backdrop-blur-sm bg-[var(--card-bg)] flex items-center justify-center'>
+            <span className='px-4 py-1.5 rounded-full bg-[var(--secondary)] text-[var(--foreground)] text-sm font-bold shadow-md'>
+              Coming Soon
+            </span>
           </div>
         )}
       </div>
       <h2 className='text-xl font-bold mb-2'>{title}</h2>
-      <p className='text-sm opacity-90'>{description}</p>
+      <p className='text-sm opacity-80'>{description}</p>
     </div>
   </Link>
 );
@@ -122,7 +133,7 @@ export default function Home() {
     <div className='min-h-screen px-4 py-8 md:px-8'>
       {/* Header Section */}
       <header className='text-center mb-12'>
-        <h1 className='text-4xl md:text-6xl font-bold float-animation text-gradient mb-4'>Quiz Dandy&apos;s World</h1>
+        <h1 className='text-4xl md:text-6xl font-bold float-animation text-gradient mb-4'>Asya&apos;s Quizzes</h1>
         <p className='text-xl md:text-2xl text-[var(--accent1)] mb-8'>Where ASYA is Tested and Quizzed!</p>
         <div className='text-6xl bounce-animation'>🎯</div>
       </header>
@@ -137,16 +148,19 @@ export default function Home() {
         {/* Category Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
           {categories.map((category) => (
-            <CategoryCard key={category.title} {...category} />
+            <CategoryCardComponent key={category.title} {...category} />
           ))}
         </div>
 
+        {/* Gradient divider */}
+        <div className='my-16 h-px bg-gradient-to-r from-transparent via-[var(--primary-light)] to-transparent' />
+
         {/* Cookie Run Kingdom Categories */}
-        <div className='mt-16'>
+        <div>
           <h2 className='text-2xl font-bold mb-8 text-center text-gradient'>Cookie Run Kingdom</h2>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {categoryCookieRunKingdom.map((category) => (
-              <CategoryCard key={category.title} {...category} />
+              <CategoryCardComponent key={category.title} {...category} />
             ))}
           </div>
         </div>

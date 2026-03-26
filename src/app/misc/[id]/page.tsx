@@ -15,8 +15,8 @@ export default function QuizPage({ params }: { params: Promise<{ id: string }> }
     return (
       <div className='min-h-screen px-4 py-8 md:px-8'>
         <div className='text-center'>
-          <p className='text-2xl text-red-500'>Quiz not found!</p>
-          <Link href='/toons' className='inline-block mt-4 text-[var(--accent1)] hover:text-[var(--accent2)]'>
+          <p className='text-2xl text-[var(--error)]'>Quiz not found!</p>
+          <Link href='/toons' className='inline-block mt-4 text-[var(--primary)] hover:text-[var(--secondary)]'>
             ← Back to Toons
           </Link>
         </div>
@@ -27,7 +27,7 @@ export default function QuizPage({ params }: { params: Promise<{ id: string }> }
   return (
     <div className='min-h-screen px-4 py-8 md:px-8'>
       {/* Back Button */}
-      <Link href='/toons' className='inline-block mb-8 text-sm text-[var(--accent1)] hover:text-[var(--accent2)] transition-colors'>
+      <Link href='/toons' className='inline-block mb-8 text-sm text-[var(--primary)] hover:text-[var(--secondary)] transition-colors'>
         ← Back to Toons
       </Link>
 
