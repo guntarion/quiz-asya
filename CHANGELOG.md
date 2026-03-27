@@ -1,3 +1,17 @@
+## 2026-03-27 19:44:12
+
+feat: Add Metal Cardbot quiz category with Phoenix Fire and Blue Cop quizzes
+
+- Add Metal Cardbot as new game world section on home page (above Dandy's World)
+- Add "Dandy's World" header to existing top category section
+- Create metal-cardbot route with category page, quiz detail page, and QuizCard component
+- Add Phoenix Fire quiz (15 questions) and Blue Cop quiz (15 questions)
+- Register MetalCardbotQuizzes in useQuiz hook lookup chain
+- Update quiz-creator agent: default 15 questions, graceful scale-down for thin material
+- Update create-quiz command: add metal-cardbot category, 15-question default
+
+---
+
 ## 2026-03-27 08:40:10
 
 security: Update Next.js 15.1.7 to 15.1.11 (CVE-2025-66478)

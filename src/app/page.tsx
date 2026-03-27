@@ -53,6 +53,19 @@ const categories: CategoryCard[] = [
   },
 ];
 
+// Category data for Metal Cardbot
+const categoryMetalCardbot: CategoryCard[] = [
+  {
+    title: 'Metal Cardbot',
+    description: 'Transform and battle with Metal Cardbots!',
+    image: '/images/Metal_Cardbots.webp',
+    icon: '🤖',
+    accentColor: 'bg-[var(--primary)]',
+    borderColor: 'border-t-[var(--primary)]',
+    isComingSoon: false,
+  },
+];
+
 // Category data for CookieRunKingdom
 const categoryCookieRunKingdom: CategoryCard[] = [
   {
@@ -151,11 +164,27 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* Category Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-          {categories.map((category) => (
-            <CategoryCardComponent key={category.title} {...category} />
-          ))}
+        {/* Metal Cardbot Categories */}
+        <div>
+          <h2 className='text-2xl font-bold mb-8 text-center text-gradient'>Metal Cardbot</h2>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {categoryMetalCardbot.map((category) => (
+              <CategoryCardComponent key={category.title} {...category} />
+            ))}
+          </div>
+        </div>
+
+        {/* Gradient divider */}
+        <div className='my-16 h-px bg-gradient-to-r from-transparent via-[var(--primary-light)] to-transparent' />
+
+        {/* Dandy's World Categories */}
+        <div>
+          <h2 className='text-2xl font-bold mb-8 text-center text-gradient'>Dandy&apos;s World</h2>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {categories.map((category) => (
+              <CategoryCardComponent key={category.title} {...category} />
+            ))}
+          </div>
         </div>
 
         {/* Gradient divider */}

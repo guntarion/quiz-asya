@@ -12,9 +12,9 @@ The user wants to create a quiz from the provided material: `$ARGUMENTS`
 If it's a file path, read the file first. If it's raw text or a topic, use it directly.
 
 Ask the user (if not already clear from the arguments):
-1. **Which category?** (toons, twisted-toons, cookies-npc, gacha-treasures, stories-game-modes, misc)
+1. **Which category?** (toons, twisted-toons, cookies-npc, gacha-treasures, stories-game-modes, misc, metal-cardbot)
 2. **Quiz title?**
-3. **How many questions?** (default: 10)
+3. **How many questions?** (default: 15)
 
 ## Step 2: Delegate to quiz-creator agent
 

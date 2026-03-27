@@ -29,6 +29,7 @@ interface QuizSet {
 - `src/data/quizzes/toons.ts` → `toonsQuizzes`
 - `src/data/quizzes/twistedtoons.ts` → `twistedToonsQuizzes`
 - `src/data/quizzes/cookienpc.ts` → `CookiesNPCQuizzes`
+- `src/data/quizzes/metalcardbot.ts` → `MetalCardbotQuizzes`
 - `src/data/quizzes/gachatreasures.ts` → `gachaTreasuresQuizzes` (may need setup)
 - `src/data/quizzes/storiesgamemodes.ts` → `storiesGameModesQuizzes` (may need setup)
 - `src/data/quizzes/misc.ts` → `miscQuizzes` (may need setup)
@@ -47,12 +48,14 @@ interface QuizSet {
 - Prioritize testable, specific knowledge over vague generalities
 
 ### 2. Generate Questions
-Produce 10 questions per quiz (unless told otherwise) following these rules:
+Produce 15 questions per quiz (unless told otherwise). If the source material lacks enough distinct facts for 15, produce as many as the material supports (minimum 8) — never pad with low-quality or repetitive questions.
 
-**Difficulty Distribution:**
-- 2-3 easy questions (basic facts, obvious characteristics)
-- 4-5 medium questions (specific details, mechanics, relationships)
-- 2-3 hard questions (obscure facts, exact numbers, edge cases)
+**Difficulty Distribution (for 15 questions):**
+- 4-5 easy questions (basic facts, obvious characteristics)
+- 6-7 medium questions (specific details, mechanics, relationships)
+- 3-4 hard questions (obscure facts, exact numbers, edge cases)
+
+Scale proportionally if producing fewer questions.
 
 **Question Quality Rules:**
 - All 4 options must be plausible — no joke answers
