@@ -1,3 +1,12 @@
+## 2026-03-27 21:02:24
+
+feat: Add Shadow X quiz to Metal Cardbot category
+
+- 15 questions covering Shadow X's design, abilities, and lore
+- Difficulty distribution: 5 easy, 7 medium, 3 hard
+
+---
+
 ## 2026-03-27 19:44:12
 
 feat: Add Metal Cardbot quiz category with Phoenix Fire and Blue Cop quizzes
