@@ -1,3 +1,12 @@
+## 2026-03-27 08:40:10
+
+security: Update Next.js 15.1.7 to 15.1.11 (CVE-2025-66478)
+
+Fixes security vulnerability in next@15.1.7 flagged as deprecated on npm.
+Manual update applied; avoided running unverified npx fix tools.
+
+---
+
 ## 2026-03-27 01:32:50
 
 feat: Add quiz history tracking with localStorage
