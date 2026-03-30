@@ -1,3 +1,12 @@
+## 2026-03-30 11:19:33
+
+feat: Add Jun Grant quiz to Metal Cardbot category
+
+- Add 15-question Jun Grant quiz (5 easy/7 medium/3 hard)
+- Add source HTML doc to docs/metal-cardbot/
+
+---
+
 ## 2026-03-30 10:29:32
 
 feat: Add Heavy Iron, Mega Ambler, and Black Hook quizzes to Metal Cardbot
