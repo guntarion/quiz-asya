@@ -1,3 +1,13 @@
+## 2026-03-30 10:29:32
+
+feat: Add Heavy Iron, Mega Ambler, and Black Hook quizzes to Metal Cardbot
+
+- Add 15-question Heavy Iron quiz (5 easy/7 medium/3 hard)
+- Add 15-question Mega Ambler quiz (5 easy/7 medium/3 hard)
+- Add 15-question Black Hook quiz (5 easy/7 medium/3 hard)
+
+---
+
 ## 2026-03-27 21:02:24
 
 feat: Add Shadow X quiz to Metal Cardbot category
