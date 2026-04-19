@@ -1,3 +1,27 @@
+## 2026-04-19 14:49:32
+
+feat: Restructure Metal Cardbot into seasons with unlock dates and SFX
+
+- Split metalcardbot.ts into per-season folder (s1/s2/s3 + index aggregator)
+  to keep files maintainable as the catalog grows
+- Add 20 new quizzes (300 questions): 6 for S1, 8 for S2, 6 for S3, sourced
+  from docs/metal-cardbot/md-files/. Merge thin-material characters into
+  combined quizzes (Black Hook Pirates, Speranza Bridge, Wild Predators, etc.)
+- Add unlockDate?: string to QuizSet with helpers in src/lib/quizUnlock.ts.
+  New quizzes unlock 2/day starting 2026-04-19; 7 existing S1 quizzes stay
+  unlocked
+- Replace single Metal Cardbot home card with 3 cards (S1/S2/S3) and overlay
+  S1/S2/S3 labels on each thumbnail
+- Add 3 season route folders under src/app/metal-cardbot/{season-1,2,3}
+  with shared MetalCardbotQuizCard component supporting default/completed
+  (green border + checkmark)/locked (grayed + countdown badge) variants
+- Add answer sound effects: /correct.mp3 plays on right answer,
+  /incorrect.mp3 on wrong answer (volume 0.6, SSR-safe)
+- Reorganize docs/metal-cardbot/ — move HTML sources to html/ subfolder and
+  add per-character md-files/ used as quiz source material
+
+---
+
 ## 2026-03-30 11:19:33
 
 feat: Add Jun Grant quiz to Metal Cardbot category

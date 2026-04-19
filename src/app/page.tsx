@@ -11,6 +11,7 @@ interface CategoryCard {
   accentColor: string;
   borderColor: string;
   isComingSoon: boolean;
+  overlayLabel?: string;
 }
 
 // Category data
@@ -56,13 +57,34 @@ const categories: CategoryCard[] = [
 // Category data for Metal Cardbot
 const categoryMetalCardbot: CategoryCard[] = [
   {
-    title: 'Metal Cardbot',
-    description: 'Transform and battle with Metal Cardbots!',
+    title: 'Metal Cardbot S1',
+    description: 'Mowtown era — Blue Cop & friends vs Black Hook Pirates!',
     image: '/images/Metal_Cardbots.webp',
     icon: '🤖',
     accentColor: 'bg-[var(--primary)]',
     borderColor: 'border-t-[var(--primary)]',
     isComingSoon: false,
+    overlayLabel: 'S1',
+  },
+  {
+    title: 'Metal Cardbot S2',
+    description: 'Speranza Crew awakens with Peruru — face Flame Nova!',
+    image: '/images/Metal_Cardbots.webp',
+    icon: '⚔️',
+    accentColor: 'bg-[var(--accent1)]',
+    borderColor: 'border-t-[var(--accent1)]',
+    isComingSoon: false,
+    overlayLabel: 'S2',
+  },
+  {
+    title: 'Metal Cardbot S3',
+    description: 'Wild Cardbots & the Beast Virus — Soleil and Grand Bluleon!',
+    image: '/images/Metal_Cardbots.webp',
+    icon: '🦁',
+    accentColor: 'bg-[var(--accent3)]',
+    borderColor: 'border-t-[var(--accent3)]',
+    isComingSoon: false,
+    overlayLabel: 'S3',
   },
 ];
 
@@ -107,7 +129,7 @@ const categoryCookieRunKingdom: CategoryCard[] = [
 ];
 
 // Category card component
-const CategoryCardComponent = ({ title, description, image, borderColor, isComingSoon }: CategoryCard) => (
+const CategoryCardComponent = ({ title, description, image, borderColor, isComingSoon, overlayLabel }: CategoryCard) => (
   <Link
     href={
       isComingSoon
@@ -118,6 +140,12 @@ const CategoryCardComponent = ({ title, description, image, borderColor, isComin
         ? '/gacha-treasures'
         : title === 'Stories and Game Modes'
         ? '/stories-game-modes'
+        : title === 'Metal Cardbot S1'
+        ? '/metal-cardbot/season-1'
+        : title === 'Metal Cardbot S2'
+        ? '/metal-cardbot/season-2'
+        : title === 'Metal Cardbot S3'
+        ? '/metal-cardbot/season-3'
         : `/${title.toLowerCase().replace(/[ &]/g, '-')}`
     }
     className='block'
@@ -127,6 +155,19 @@ const CategoryCardComponent = ({ title, description, image, borderColor, isComin
     >
       <div className='relative w-full h-40 mb-4 rounded-lg overflow-hidden'>
         <Image src={image} alt={title} fill className={`object-cover ${isComingSoon ? 'grayscale' : ''}`} />
+        {overlayLabel && !isComingSoon && (
+          <>
+            <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent' />
+            <span
+              className='absolute top-2 right-2 px-3 py-1 rounded-full bg-[var(--card-bg)]/80 backdrop-blur-sm border-2 border-[var(--primary)] text-[var(--primary)] text-sm font-extrabold shadow-lg'
+            >
+              {overlayLabel}
+            </span>
+            <span className='absolute bottom-2 left-3 text-5xl font-extrabold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)] tracking-wider'>
+              {overlayLabel}
+            </span>
+          </>
+        )}
         {isComingSoon && (
           <div className='absolute inset-0 backdrop-blur-sm bg-[var(--card-bg)] flex items-center justify-center'>
             <span className='px-4 py-1.5 rounded-full bg-[var(--secondary)] text-[var(--foreground)] text-sm font-bold shadow-md'>

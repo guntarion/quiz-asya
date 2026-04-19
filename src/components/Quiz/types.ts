@@ -12,6 +12,7 @@ export interface QuizSet {
   id: string;
   title: string;
   questions: QuizQuestion[];
+  unlockDate?: string; // ISO date 'YYYY-MM-DD'. Absent or in the past = unlocked.
 }
 
 export interface QuizAttempt {

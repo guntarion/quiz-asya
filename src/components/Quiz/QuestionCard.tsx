@@ -1,7 +1,20 @@
+'use client';
+
 /* File: src/components/Quiz/QuestionCard.tsx */
 
 import { motion } from 'framer-motion';
 import { QuestionCardProps } from './types';
+
+function playAnswerSound(isCorrect: boolean) {
+  if (typeof window === 'undefined') return;
+  try {
+    const audio = new Audio(isCorrect ? '/correct.mp3' : '/incorrect.mp3');
+    audio.volume = 0.6;
+    void audio.play().catch(() => {});
+  } catch {
+    // Audio unsupported — fail silently
+  }
+}
 
 const variants = {
   enter: { opacity: 0, x: 50 },
@@ -18,6 +31,12 @@ const difficultyStyles: Record<string, string> = {
 };
 
 export function QuestionCard({ question, onAnswer, isAnswered, selectedAnswer }: QuestionCardProps) {
+  const handleAnswer = (option: string) => {
+    if (isAnswered) return;
+    playAnswerSound(option === question.correctAnswer);
+    onAnswer(option);
+  };
+
   return (
     <motion.div
       initial='enter'
@@ -63,7 +82,7 @@ export function QuestionCard({ question, onAnswer, isAnswered, selectedAnswer }:
           return (
             <motion.button
               key={index}
-              onClick={() => !isAnswered && onAnswer(option)}
+              onClick={() => handleAnswer(option)}
               disabled={isAnswered}
               whileHover={!isAnswered ? { scale: 1.02 } : undefined}
               whileTap={!isAnswered ? { scale: 0.98 } : undefined}
